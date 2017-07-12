@@ -23,11 +23,9 @@ end
 AddEventHandler('onClientMapStart', function()
 	if currentdistancevoice == 0 then
 		NetworkSetTalkerProximity(defaultdistance) -- 5 meters range
-	end
-	if currentdistancevoice == 1 then
+	elseif currentdistancevoice == 1 then
 		NetworkSetTalkerProximity(highdistance) -- 12 meters range
-	end
-	if currentdistancevoice == 2 then
+	elseif currentdistancevoice == 2 then
 		NetworkSetTalkerProximity(lowdistance) -- 1 meters range
 	end
 end)
@@ -39,12 +37,10 @@ Citizen.CreateThread(function()
 			if currentdistancevoice == 0 then
 				NetworkSetTalkerProximity(defaultdistance) -- 5 meters range
 				Notify("~w~Niveau vocal : ~b~normal")
-			end
-			if currentdistancevoice == 1 then
+			elseif currentdistancevoice == 1 then
 				NetworkSetTalkerProximity(highdistance) -- 12 meters range
 				Notify("~w~Niveau vocal : ~b~crier")
-			end
-			if currentdistancevoice == 2 then
+			elseif currentdistancevoice == 2 then
 				NetworkSetTalkerProximity(lowdistance) -- 1 meters range
 				Notify("~w~Niveau vocal : ~b~chuchoter")
 			end
