@@ -17,7 +17,7 @@ local currentdistancevoice = 0 -- Current distance to voice (0 to 2)
 function Notify(text)
     SetNotificationTextEntry('STRING')
     AddTextComponentString(text)
-    DrawNotification(true, false)
+    DrawNotification(false, true)
 end
 
 AddEventHandler('onClientMapStart', function()
